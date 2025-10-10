@@ -13,7 +13,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v6.0.0
         with:
-          python-version: '3.13.7'
+          python-version: "3.14.0"
       - name: Diagnostic
         run: |
           set +e
@@ -33,15 +33,10 @@ jobs:
           bash --version
           echo "=========> node"
           echo "=========> python"
-          pip install --upgrade pip
-          pip install pipenv
           python -V
-          pip list
-          pip --version
-          pipenv --version
+          uv pin version || true
           which python
           which pip
-          which pipenv
           exit
           echo "=========> go"
           go version

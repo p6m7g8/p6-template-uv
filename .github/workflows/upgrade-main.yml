@@ -3,7 +3,7 @@ name: upgrade-main
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: '0 14 * * *'
+    - cron: "0 14 * * *"
 
 jobs:
   upgrade:
@@ -17,16 +17,15 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v6.0.0
         with:
-          python-version: '3.13.7'
+          python-version: "3.14.0"
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install pipenv
-          pipenv install
-          pipenv install --dev
+          pip install uv
+          uv sync --dev
       - name: Update Deps
         run: |
-          pipenv update
+          uv update -a
           pre-commit run --all-files
           git diff
       - name: Create Pull Request
