@@ -12,16 +12,16 @@ jobs:
     steps:
       - uses: actions/checkout@v5.0.0
 
-      - name: Set up Python 3.13.7
+      - name: Set up Python 3.14.0
         uses: actions/setup-python@v6.0.0
         with:
-          python-version: 3.13.7
+          python-version: 3.14.0
 
       - name: Install pipenv
-        run: pip install pipenv
+        run: pip install uv
 
       - name: Install dependencies
-        run: pipenv install --dev
+        run: uv sync --dev
 
       - name: Run pre-commit hooks
-        run: pipenv run pre-commit run --all-files
+        run: uv run pre-commit run --all-files
