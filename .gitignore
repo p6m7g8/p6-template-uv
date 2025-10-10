@@ -1,6 +1,5 @@
 .pyre/
 .pytest_cache/
 htmlcov/
-ld_common/__pycache__/
-share/reports/
+p6_template_uv.egg-info/
 tests/__pycache__/
