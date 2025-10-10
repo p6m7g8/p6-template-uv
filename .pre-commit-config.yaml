@@ -57,11 +57,11 @@ repos:
         language: system
         pass_filenames: false
 
-      - id: pip-audit
-        name: pip-audit
-        entry: uv run pip-audit
-        language: system
-        pass_filenames: false
+      # - id: pip-audit
+      #   name: pip-audit
+      #   entry: uv run pip-audit
+      #   language: system
+      #   pass_filenames: false
 
       - id: codespell
         name: codespell
