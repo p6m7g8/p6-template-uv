@@ -1,14 +1,24 @@
 {
     "recommendations": [
-        "ms-python.python",
+        "bierner.markdown-preview-github-styles",
+        "christian-kohler.path-intellisense",
+        "foxundermoon.shell-format",
+        "github.vscode-github-actions",
         "ms-python.black-formatter",
-        "ms-toolsai.jupyter",
+        "ms-python.debugpy",
         "ms-python.flake8",
         "ms-python.isort",
-        "mikehillyer.vscode-mypy",
-        "ms-toolsai.pylance",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.vscode-python-envs",
+        "redhat.vscode-commons",
+        "redhat.vscode-yaml",
+        "shardulm94.trailing-spaces",
+        "shd101wyy.markdown-preview-enhanced",
         "streetsidesoftware.code-spell-checker",
-        "the0807.uv-toolkit"
-    ],
-    "unwantedRecommendations": []
+        "the0807.uv-toolkit",
+        "timonwong.shellcheck",
+        "yzane.markdown-pdf",
+        "yzhang.markdown-all-in-one"
+    ]
 }
