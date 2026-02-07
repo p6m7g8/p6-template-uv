@@ -39,3 +39,13 @@ line-length = 120
 
 [tool.isort]
 profile = "black"
+
+[tool.flake8]
+max-line-length = 120
+extend-ignore = ["E203"]
+
+[tool.pylint.format]
+max-line-length = 120
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
