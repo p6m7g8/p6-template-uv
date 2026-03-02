@@ -25,14 +25,15 @@ jobs:
           uv sync --dev
       - name: Update Deps
         run: |
-          uv update -a
+          uv lock --upgrade
+          uv sync --dev
           pre-commit run --all-files
           git diff
       - name: Create Pull Request
         id: create-pr
         uses: peter-evans/create-pull-request@v7.0.8
         with:
-          token: ${{ secrets.P6_PGOLLUCCI_GH_TOKEN }}
+          token: ${{ secrets.P6_A_GH_TOKEN }}
           commit-message: |-
             chore(deps): upgrade dependencies
 
