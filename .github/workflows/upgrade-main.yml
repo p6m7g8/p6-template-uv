@@ -27,7 +27,7 @@ jobs:
         run: |
           uv lock --upgrade
           uv sync --dev
-          pre-commit run --all-files
+          uv run pre-commit run --all-files
           git diff
       - name: Create Pull Request
         id: create-pr
