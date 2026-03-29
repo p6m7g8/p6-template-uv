@@ -1,19 +1,14 @@
-name: build
+name: Build
 
 on:
-  push:
-    branches: [main]
-  pull_request:
+  pull_request: {}
+  workflow_dispatch: {}
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: p6m7g8-actions/checkout@main
-
-      - name: Set up Python
-        uses: p6m7g8-actions/python-setup@main
-
-      - name: Run pre-commit hooks
-        run: uv run pre-commit run --all-files
+      - name: Build
+        uses: p6m7g8-actions/p6-build@main
+        with:
+          gh_token: ${{ secrets.GITHUB_TOKEN }}
