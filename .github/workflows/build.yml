@@ -2,7 +2,11 @@ name: build
 
 on:
   push:
-    branches: [main]
+    # main keeps building on push. gh-readonly-queue/** is added because `build`
+    # is a required check and the merge queue re-runs required checks on its own
+    # ref; merge_group is not dispatching org-wide, so without this the queue
+    # waits for a check that never arrives.
+    branches: [main, "gh-readonly-queue/**"]
   pull_request:
 
 jobs:
